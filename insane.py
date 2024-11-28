@@ -262,7 +262,7 @@ def handle_insane(message):
                             else:
                                 # Start the attack and set the new cooldown
                                 start_attack_reply(message, target, port, time)
-                                bgmi_cooldown[user_id] = datetime.now(pytz.timezone('Asia/Kolkata')) + timedelta(minutes=5)
+                                bgmi_cooldown[user_id] = datetime.now(pytz.timezone('Asia/Kolkata')) + timedelta(minutes=1)
                                 return  # Early return since response is handled in start_attack_reply
                         except ValueError:
                             response = "Error: Please ensure port and time are integers."
@@ -281,7 +281,7 @@ def handle_insane(message):
                         else:
                             # Start the attack and set the new cooldown
                             start_attack_reply(message, target, port, time)
-                            bgmi_cooldown[user_id] = datetime.now(pytz.timezone('Asia/Kolkata')) + timedelta(minutes=5)
+                            bgmi_cooldown[user_id] = datetime.now(pytz.timezone('Asia/Kolkata')) + timedelta(minutes=1)
                             return  # Early return since response is handled in start_attack_reply
                     except ValueError:
                         response = "Error: Please ensure port and time are integers."
